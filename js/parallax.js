@@ -60,9 +60,12 @@ $(document).ready(function() {
 
 function parallaxScroll() {
     var scrolled = $(window).scrollTop();
-    $('#parallax-bg1').css('top', (0 - (scrolled * .25)) + 'px');
-    $('#parallax-bg2').css('top', (0 - (scrolled * .5)) + 'px');
-    $('#parallax-bg3').css('top', (0 - (scrolled * .75)) + 'px');
+    $('#parallax-bg1').css('top', (0 - (scrolled * .15)) + 'px');
+    $('#parallax-bg2').css('top', (0 - (scrolled * .15)) + 'px');
+    $('#parallax-bg3').css('top', (0 - (scrolled * .175)) + 'px');
+    $('#parallax-bg1').css('right', (0 - (scrolled * .15)) + 'px');
+    $('#parallax-bg2').css('right', (0 - (scrolled * .15)) + 'px');
+    $('#parallax-bg3').css('right', (0 - (scrolled * .275)) + 'px');
 }
 
 /* Set navigation dots to an active state as the user scrolls */
