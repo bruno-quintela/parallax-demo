@@ -1,44 +1,44 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     redrawDotNav();
 
     /* Scroll event handler */
-    $(window).bind('scroll', function(e) {
+    $(window).bind('scroll', function (e) {
         parallaxScroll();
         redrawDotNav();
     });
 
     /* Next/prev and primary nav btn click handlers */
-    $('a.manned-flight').click(function() {
+    $('a.manned-flight').click(function () {
         $('html, body').animate({
             scrollTop: 0
-        }, 1000, function() {
+        }, 1000, function () {
             parallaxScroll(); // Callback is required for iOS
         });
         return false;
     });
-    $('a.frameless-parachute').click(function() {
+    $('a.frameless-parachute').click(function () {
         $('html, body').animate({
             scrollTop: $('#frameless-parachute').offset().top
-        }, 1000, function() {
+        }, 1000, function () {
             parallaxScroll(); // Callback is required for iOS
         });
         return false;
     });
-    $('a.english-channel').click(function() {
+    $('a.english-channel').click(function () {
         $('html, body').animate({
             scrollTop: $('#english-channel').offset().top
-        }, 1000, function() {
+        }, 1000, function () {
             parallaxScroll(); // Callback is required for iOS
         });
         return false;
     });
 
     //asdasd
-    $('a.about').click(function() {
+    $('a.about').click(function () {
         $('html, body').animate({
             scrollTop: $('#about').offset().top
-        }, 1000, function() {
+        }, 1000, function () {
             parallaxScroll(); // Callback is required for iOS
         });
         return false;
@@ -46,10 +46,10 @@ $(document).ready(function() {
 
     /* Show/hide dot lav labels on hover */
     $('nav#primary a').hover(
-        function() {
+        function () {
             $(this).prev('h1').show();
         },
-        function() {
+        function () {
             $(this).prev('h1').hide();
         }
     );
